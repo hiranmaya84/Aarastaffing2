@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Our Work — Aaradhya Sales Force Solutions</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#00524A;--teal-mid:#007A6E;--gold:#C8922A;--gold-lt:#E5B84A;--dark:#111C1A;--muted:#5A7A75;--white:#fff;--border:#D4E0DE;--page-bg:#F3F6F5;--nav-h:68px;}
+body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--white);color:var(--dark);line-height:1.5;}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
+.section{padding:60px 0;}
+@media(min-width:768px){.section{padding:88px 0;}.container{padding:0 40px;}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;border:none;text-decoration:none;}
+.btn-primary{background:var(--teal);color:white;}
+.btn-gold{background:var(--gold);color:white;}
+.btn-outline-dark{background:transparent;border:1.5px solid rgba(255,255,255,0.3);color:white;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--gold);letter-spacing:3px;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
+.eyebrow.light{color:var(--gold-lt);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:700;line-height:1.1;}
+.page-hero{background:var(--dark);padding:calc(var(--nav-h) + 40px) 0 60px;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,68px);color:white;}
+.page-hero h1 em{color:var(--gold-lt);font-style:italic;}
+.process-steps{display:flex;flex-direction:column;margin-top:44px;}
+.ps-item{display:grid;grid-template-columns:1fr;gap:16px;padding:32px 0;border-bottom:1px solid var(--border);}
+@media(min-width:768px){.ps-item{grid-template-columns:80px 1fr 1fr;gap:32px;}}
+.ps-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:rgba(0,82,74,0.12);}
+.ps-time{display:inline-block;background:rgba(0,82,74,0.08);color:var(--teal);border-radius:20px;padding:4px 12px;font-size:12px;margin-bottom:8px;}
+.screen-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:44px;}
+@media(min-width:640px){.screen-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1024px){.screen-grid{grid-template-columns:repeat(3,1fr);}}
+.screen-card{background:#fff;border-radius:12px;border:1px solid var(--border);padding:24px;}
+.map-section{background:var(--dark);}
+.coverage-grid{display:grid;grid-template-columns:1fr;gap:3px;margin-top:44px;border-radius:16px;overflow:hidden;}
+@media(min-width:768px){.coverage-grid{grid-template-columns:1fr 1fr;}}
+.cov-col{padding:28px;background:rgba(255,255,255,0.03);}
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:44px;}
+@media(min-width:768px){.metrics-grid{grid-template-columns:repeat(4,1fr);}}
+.metric-card{text-align:center;padding:28px 16px;background:#fff;border-radius:14px;border:1px solid var(--border);}
+.metric-val{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--teal);}
+.divs-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:44px;}
+@media(min-width:480px){.divs-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:768px){.divs-grid{grid-template-columns:repeat(3,1fr);}}
+.div-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;display:flex;gap:10px;align-items:center;}
+.cta-band{background:linear-gradient(135deg,var(--teal),var(--teal-mid));padding:56px 0;}
+.cta-inner{display:flex;flex-direction:column;gap:32px;text-align:center;}
+@media(min-width:768px){.cta-inner{flex-direction:row;justify-content:space-between;text-align:left;}}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(17,28,26,0.96);backdrop-filter:blur(12px);z-index:200;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 20px;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:white;}
+.nav-logo span{color:var(--gold-lt);}
+.nav-links{display:none;}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+.nav-hamburger span{width:22px;height:2px;background:white;}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:#0D1F1C;padding:16px 20px;flex-direction:column;z-index:199;}
+.mobile-menu.open{display:flex;}
+.mobile-link{padding:12px 0;font-size:15px;color:rgba(255,255,255,0.8);text-decoration:none;}
+@media(min-width:900px){.nav-links{display:flex;gap:4px;}.nav-link{padding:8px 14px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;border-radius:8px;}.nav-hamburger,.mobile-menu{display:none;}}
+.footer{background:#080E0D;padding:48px 0 24px;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:40px;}
+@media(min-width:640px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;}}
+.footer-bottom{display:flex;flex-direction:column;gap:12px;text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);}
+@media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;}}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;}
+.footer-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1px;margin-bottom:16px;}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="nav"><div class="nav-inner"><div class="nav-logo">Aaradhya <span>SFS</span></div><div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="our-work.html" class="nav-link">Our Work</a><a href="contact.html" class="nav-link">Contact</a></div><div class="nav-right"><div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div></div></div><div class="mobile-menu" id="mobileMenu"><a href="index.html" class="mobile-link">Home</a><a href="about.html" class="mobile-link">About</a><a href="services.html" class="mobile-link">Services</a><a href="our-work.html" class="mobile-link">Our Work</a><a href="contact.html" class="mobile-link">Contact</a></div></div>
+
+<div class="page-hero"><div class="container"><div class="eyebrow light">How We Operate</div><h1>The Work Behind<em>Every Deployment</em></h1><p>A transparent look at how we source, screen and deploy Medical Representatives — and why our process delivers faster, better results.</p></div></div>
+
+<section class="section"><div class="container"><div class="eyebrow">Step by Step</div><h2 class="section-title">Our Deployment Process</h2><div class="process-steps"><div class="ps-item"><div class="ps-num">01</div><div><div class="ps-time">⏱ Day 0</div><h3>Receive Requirement</h3><p>You share territory, product division, CTC range and MR profile.</p></div><div><div class="ps-detail">📍 Target HQ or territory</div><div class="ps-detail">💊 Product division and doctor segment</div></div></div><div class="ps-item"><div class="ps-num">02</div><div><div class="ps-time">⏱ Day 0–1</div><h3>Source from Active Pipeline</h3><p>We match against our maintained candidate database — pre-profiled by HQ and division.</p></div><div><div class="ps-detail">🗄️ Pre-built database of MRs across Odisha HQs</div></div></div><div class="ps-item"><div class="ps-num">03</div><div><div class="ps-time">⏱ Day 1–2</div><h3>Screen & Shortlist</h3><p>Every candidate is personally screened — communication, territory knowledge, stability.</p></div><div><div class="ps-detail">🗣️ Communication and confidence</div><div class="ps-detail">🗺️ Territory knowledge — key doctors and chemists</div></div></div></div></div></section>
+
+<section class="section" style="background:var(--page-bg);"><div class="container"><div class="eyebrow">Candidate Quality</div><h2 class="section-title">What We Screen For</h2><div class="screen-grid"><div class="screen-card"><div style="font-size:26px;">🗣️</div><h4 style="margin:8px 0;">Communication</h4><p>Can this MR communicate confidently with GPs and specialists?</p></div><div class="screen-card"><div style="font-size:26px;">🗺️</div><h4 style="margin:8px 0;">Territory Knowledge</h4><p>Does the candidate know the key doctors and stockists in their target HQ?</p></div><div class="screen-card"><div style="font-size:26px;">📊</div><h4 style="margin:8px 0;">Stability Track Record</h4><p>We review tenure patterns carefully — job-hoppers are flagged.</p></div></div></div></section>
+
+<div class="cta-band"><div class="container"><div class="cta-inner"><div><h2 style="color:white;">Seen Enough?</h2><p style="color:rgba(255,255,255,0.7);">Let us put this process to work for your field force requirement.</p></div><div><a href="contact.html" class="btn btn-gold btn-lg">Share Your Requirement</a><a href="services.html" class="btn btn-outline-dark btn-lg" style="margin-left:12px;">View All Services</a></div></div></div></div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:white;">Aaradhya <span style="color:var(--gold-lt);">SFS</span></div><p style="font-size:13px;margin-top:12px;color:rgba(255,255,255,0.4);">Pharma field force specialists — MR recruitment, payroll, deployment across Odisha.</p></div><div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="our-work.html">Our Work</a><a href="services.html">Services</a></div><div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a></div><div class="footer-col"><h4>Connect</h4><p style="font-size:13px;color:rgba(255,255,255,0.5);">✉️ aaradhyasfs@gmail.com</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📍 Odisha, India</p></div></div><div class="footer-bottom"><span>© 2025 Aaradhya Sales Force Solutions</span><span>Odisha's Trusted Pharma Partner</span></div></div></footer>
+<script>document.getElementById('hamburger')?.addEventListener('click',()=>{document.getElementById('mobileMenu')?.classList.toggle('open');});</script>
+</body>
+</html>
