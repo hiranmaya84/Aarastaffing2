@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Our Services — Aaradhya Sales Force Solutions</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#00524A;--teal-mid:#007A6E;--gold:#C8922A;--gold-lt:#E5B84A;--dark:#111C1A;--muted:#5A7A75;--white:#fff;--border:#D4E0DE;--page-bg:#F3F6F5;--nav-h:68px;}
+body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--white);color:var(--dark);line-height:1.5;}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
+.section{padding:60px 0;}
+@media(min-width:768px){.section{padding:88px 0;}.container{padding:0 40px;}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;border:none;text-decoration:none;}
+.btn-primary{background:var(--teal);color:white;}
+.btn-gold{background:var(--gold);color:white;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--gold);letter-spacing:3px;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
+.eyebrow.light{color:var(--gold-lt);}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,5vw,52px);font-weight:700;line-height:1.1;}
+.page-hero{background:var(--dark);padding:calc(var(--nav-h) + 40px) 0 60px;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,68px);color:white;}
+.page-hero h1 em{color:var(--gold-lt);font-style:italic;}
+.svc-section{padding:60px 0;border-bottom:1px solid var(--border);}
+.svc-layout{display:grid;grid-template-columns:1fr;gap:40px;}
+@media(min-width:900px){.svc-layout{grid-template-columns:1fr 1fr;gap:60px;}}
+.svc-badge{display:inline-block;background:rgba(0,82,74,0.08);color:var(--teal);border-radius:8px;padding:6px 14px;font-size:13px;margin-bottom:16px;}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;margin-bottom:16px;}
+.svc-point{display:flex;gap:12px;margin-bottom:12px;font-size:14px;}
+.roles-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px;}
+@media(min-width:480px){.roles-grid{grid-template-columns:repeat(2,1fr);}}
+.role-chip{background:#fff;border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;}
+.billing-table{background:#fff;border-radius:12px;border:1px solid var(--border);overflow:hidden;}
+.bt-row{display:flex;justify-content:space-between;padding:13px 18px;border-bottom:1px solid var(--border);}
+.timeline{display:flex;flex-direction:column;gap:16px;}
+.tl-item{display:flex;gap:16px;}
+.cta-band{background:linear-gradient(135deg,var(--teal),var(--teal-mid));padding:56px 0;}
+.cta-inner{display:flex;flex-direction:column;gap:32px;text-align:center;}
+@media(min-width:768px){.cta-inner{flex-direction:row;justify-content:space-between;text-align:left;}}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(17,28,26,0.96);backdrop-filter:blur(12px);z-index:200;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 20px;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:white;}
+.nav-logo span{color:var(--gold-lt);}
+.nav-links{display:none;}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+.nav-hamburger span{width:22px;height:2px;background:white;}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:#0D1F1C;padding:16px 20px;flex-direction:column;z-index:199;}
+.mobile-menu.open{display:flex;}
+.mobile-link{padding:12px 0;font-size:15px;color:rgba(255,255,255,0.8);text-decoration:none;}
+@media(min-width:900px){.nav-links{display:flex;gap:4px;}.nav-link{padding:8px 14px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;border-radius:8px;}.nav-hamburger,.mobile-menu{display:none;}}
+.footer{background:#080E0D;padding:48px 0 24px;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:40px;}
+@media(min-width:640px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;}}
+.footer-bottom{display:flex;flex-direction:column;gap:12px;text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);}
+@media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;}}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;}
+.footer-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1px;margin-bottom:16px;}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="nav"><div class="nav-inner"><div class="nav-logo">Aaradhya <span>SFS</span></div><div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="our-work.html" class="nav-link">Our Work</a><a href="contact.html" class="nav-link">Contact</a></div><div class="nav-right"><div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div></div></div><div class="mobile-menu" id="mobileMenu"><a href="index.html" class="mobile-link">Home</a><a href="about.html" class="mobile-link">About</a><a href="services.html" class="mobile-link">Services</a><a href="our-work.html" class="mobile-link">Our Work</a><a href="contact.html" class="mobile-link">Contact</a></div></div>
+
+<div class="page-hero"><div class="container"><div class="eyebrow light">What We Do</div><h1>End-to-End<em>Field Force Services</em></h1><p>Every layer of pharma field force management — recruitment, payroll, deployment and compliance — handled by specialists.</p></div></div>
+
+<div class="svc-section"><div class="container"><div class="svc-layout"><div><div class="svc-badge">🎯 MR Recruitment</div><h2 class="svc-title">Find the Right MR for Every Territory</h2><p style="color:var(--muted);margin-bottom:24px;">We source, screen and shortlist Medical Representatives matched to your specific territory, product division and CTC band.</p><div class="svc-point"><span>✓</span> Territory-matched sourcing</div><div class="svc-point"><span>✓</span> Full screening: communication, doctor segment knowledge</div><div class="svc-point"><span>✓</span> 48-hour shortlist delivery</div><a href="contact.html" class="btn btn-primary" style="margin-top:20px;">Request Candidates</a></div><div><div style="background:var(--page-bg);border-radius:20px;padding:28px;"><h3 style="margin-bottom:16px;">Roles We Fill</h3><div class="roles-grid"><div class="role-chip">Medical Representative (MR)</div><div class="role-chip">Senior MR</div><div class="role-chip">Area Business Manager (ABM)</div><div class="role-chip">Zonal Business Manager (ZBM)</div></div></div></div></div></div></div>
+
+<div class="svc-section" style="background:var(--page-bg);"><div class="container"><div class="svc-layout"><div><div class="svc-badge">💰 Payroll Management</div><h2 class="svc-title">One Invoice. Zero Complexity.</h2><p style="color:var(--muted);margin-bottom:24px;">We manage the complete monthly payroll cycle — salary disbursement, TA/DA processing, payslips and statutory deductions.</p><div class="svc-point"><span>✓</span> Monthly salary disbursement directly to MR bank accounts</div><div class="svc-point"><span>✓</span> Single consolidated invoice covering salary, TA/DA and management fee</div><div class="svc-point"><span>✓</span> GST applied only on management fee — not on full billing amount</div><a href="contact.html" class="btn btn-primary" style="margin-top:20px;">Discuss Payroll Setup</a></div><div><div class="billing-table"><div style="background:var(--teal);color:white;padding:12px 18px;">Sample Monthly Billing (per MR)</div><div class="bt-row"><span>MR Salary</span><span>₹18,000 – ₹22,000</span></div><div class="bt-row"><span>TA / DA</span><span>₹3,000 – ₹5,000</span></div><div class="bt-row"><span>Management Fee</span><span>₹2,000 – ₹5,000</span></div></div></div></div></div></div>
+
+<div class="cta-band"><div class="container"><div class="cta-inner"><div><h2 style="color:white;">Need Any of These Services?</h2><p style="color:rgba(255,255,255,0.7);">Tell us your requirement and we'll have a plan ready within 24 hours.</p></div><div><a href="contact.html" class="btn btn-gold btn-lg">Get in Touch</a><a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn btn-primary btn-lg" style="margin-left:12px;background:#25D366;">💬 WhatsApp</a></div></div></div></div>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:white;">Aaradhya <span style="color:var(--gold-lt);">SFS</span></div><p style="font-size:13px;margin-top:12px;color:rgba(255,255,255,0.4);">Pharma field force specialists — MR recruitment, payroll, deployment across Odisha.</p></div><div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="our-work.html">Our Work</a><a href="services.html">Services</a></div><div class="footer-col"><h4>Support</h4><a href="contact.html">Contact</a></div><div class="footer-col"><h4>Connect</h4><p style="font-size:13px;color:rgba(255,255,255,0.5);">✉️ aaradhyasfs@gmail.com</p><p style="font-size:13px;color:rgba(255,255,255,0.5);">📍 Odisha, India</p></div></div><div class="footer-bottom"><span>© 2025 Aaradhya Sales Force Solutions</span><span>Odisha's Trusted Pharma Partner</span></div></div></footer>
+<script>document.getElementById('hamburger')?.addEventListener('click',()=>{document.getElementById('mobileMenu')?.classList.toggle('open');});</script>
+</body>
+</html>
