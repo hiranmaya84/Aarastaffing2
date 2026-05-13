@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Contact Us — Aaradhya Sales Force Solutions</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--teal:#00524A;--teal-mid:#007A6E;--gold:#C8922A;--gold-lt:#E5B84A;--dark:#111C1A;--muted:#5A7A75;--white:#fff;--border:#D4E0DE;--page-bg:#F3F6F5;--nav-h:68px;}
+body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--white);color:var(--dark);line-height:1.5;}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;}
+.section{padding:60px 0;}
+@media(min-width:768px){.section{padding:88px 0;}.container{padding:0 40px;}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;border:none;text-decoration:none;}
+.btn-gold{background:var(--gold);color:white;}
+.btn-wa{background:#25D366;color:white;}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--gold);letter-spacing:3px;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
+.page-hero{background:var(--dark);padding:calc(var(--nav-h) + 40px) 0 60px;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,7vw,68px);color:white;}
+.page-hero h1 em{color:var(--gold-lt);font-style:italic;}
+.contact-layout{display:grid;grid-template-columns:1fr;gap:40px;}
+@media(min-width:900px){.contact-layout{grid-template-columns:1fr 1.6fr;gap:56px;}}
+.contact-channels{display:flex;flex-direction:column;gap:12px;margin-top:24px;}
+.channel-card{background:var(--page-bg);border-radius:12px;border:1px solid var(--border);padding:16px 18px;display:flex;align-items:center;gap:14px;}
+.form-card{background:#fff;border-radius:18px;border:1px solid var(--border);padding:28px;}
+@media(min-width:768px){.form-card{padding:36px;}}
+.form-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:640px){.form-grid{grid-template-columns:1fr 1fr;}}
+.fg{display:flex;flex-direction:column;gap:6px;}
+.fg input,.fg select,.fg textarea{padding:12px 14px;border:1.5px solid var(--border);border-radius:9px;font-family:inherit;font-size:14px;}
+.fg.span2{grid-column:1/-1;}
+.char-select{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;}
+.char-opt{border:1.5px solid var(--border);border-radius:8px;padding:10px 12px;font-size:13px;text-align:center;cursor:pointer;}
+.char-opt.selected{border-color:var(--teal);background:rgba(0,82,74,0.08);color:var(--teal);}
+.faq-list{display:flex;flex-direction:column;margin-top:44px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{display:flex;justify-content:space-between;padding:18px 0;cursor:pointer;font-weight:600;}
+.faq-a{display:none;padding-bottom:18px;font-size:14px;color:var(--muted);}
+.faq-item.open .faq-a{display:block;}
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(17,28,26,0.96);backdrop-filter:blur(12px);z-index:200;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;padding:0 20px;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:white;}
+.nav-logo span{color:var(--gold-lt);}
+.nav-links{display:none;}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+.nav-hamburger span{width:22px;height:2px;background:white;}
+.mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:#0D1F1C;padding:16px 20px;flex-direction:column;z-index:199;}
+.mobile-menu.open{display:flex;}
+.mobile-link{padding:12px 0;font-size:15px;color:rgba(255,255,255,0.8);text-decoration:none;}
+@media(min-width:900px){.nav-links{display:flex;gap:4px;}.nav-link{padding:8px 14px;color:rgba(255,255,255,0.7);text-decoration:none;font-size:14px;border-radius:8px;}.nav-hamburger,.mobile-menu{display:none;}}
+.footer{background:#080E0D;padding:48px 0 24px;}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:40px;}
+@media(min-width:640px){.footer-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;}}
+.footer-bottom{display:flex;flex-direction:column;gap:12px;text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);}
+@media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;}}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:8px;}
+.footer-col h4{font-size:11px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:1px;margin-bottom:16px;}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="nav"><div class="nav-inner"><div class="nav-logo">Aaradhya <span>SFS</span></div><div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="our-work.html" class="nav-link">Our Work</a><a href="contact.html" class="nav-link">Contact</a></div><div class="nav-right"><div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div></div></div><div class="mobile-menu" id="mobileMenu"><a href="index.html" class="mobile-link">Home</a><a href="about.html" class="mobile-link">About</a><a href="services.html" class="mobile-link">Services</a><a href="our-work.html" class="mobile-link">Our Work</a><a href="contact.html" class="mobile-link">Contact</a></div></div>
+
+<div class="page-hero"><div class="container"><div class="eyebrow light">Let's Talk</div><h1>Share Your<em>Requirement</em></h1><p>Tell us your territory, product division and MR headcount. We'll respond within hours.</p></div></div>
+
+<section class="section"><div class="container"><div class="contact-layout"><div><div class="eyebrow">Our Promise</div><h2 style="font-family:'Cormorant Garamond',serif;font-size:32px;margin-bottom:12px;">Fast, Honest, Pharma-Specific</h2><p style="color:var(--muted);margin-bottom:24px;">We respond to every enquiry within a few hours. No automated replies, just a direct conversation.</p><div class="contact-channels"><div class="channel-card"><div>💬</div><div><div style="font-size:11px;color:var(--muted);">WhatsApp (Fastest)</div><div>+91 XXXXX XXXXX</div></div></div><div class="channel-card"><div>📞</div><div><div style="font-size:11px;color:var(--muted);">Phone</div><div>+91 XXXXX XXXXX</div></div></div><div class="channel-card"><div>✉️</div><div><div style="font-size:11px;color:var(--muted);">Email</div><div>aaradhyasfs@gmail.com</div></div></div></div></div>
+
+<div class="form-card"><h3 style="font-size:20px;">Send Your Requirement</h3><p style="margin-bottom:24px;color:var(--muted);">Fill this in and we'll respond with an initial plan within a few hours.</p>
+<form id="contactForm" onsubmit="submitForm(event)"><div class="form-grid"><div class="fg"><label>Company Name *</label><input id="f-company" required></div><div class="fg"><label>Your Name *</label><input id="f-name" required></div><div class="fg"><label>Mobile *</label><input id="f-mobile" type="tel" required></div><div class="fg"><label>Target Territory *</label><select id="f-territory" required><option value="">Select territory</option><option>Bhubaneswar</option><option>Cuttack</option><option>Sambalpur</option><option>Kalahandi</option><option>Nuapada</option></select></div><div class="fg"><label>Product Division *</label><select id="f-division" required><option value="">Select</option><option>Allopathy / Ethical</option><option>Generic Pharma</option><option>Ayurvedic</option></select></div><div class="fg"><label>Number of MRs</label><input id="f-count" type="number"></div><div class="fg span2"><label>Additional Details</label><textarea id="f-notes" rows="2"></textarea></div></div><div class="char-select" style="margin:16px 0;"><div class="char-opt" onclick="toggleService(this)">MR Recruitment</div><div class="char-opt" onclick="toggleService(this)">Payroll Outsourcing</div><div class="char-opt" onclick="toggleService(this)">Full Service</div></div><button type="submit" class="btn btn-gold btn-lg" style="width:100%;">Send Requirement →</button><div id="success-msg" style="display:none;margin-top:16px;background:#E6F4F0;padding:12px;border-radius:8px;color:var(--teal);">✅ Your requirement has been sent! We'll get back to you soon.</div></form></div></div></div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div style="font-family:'Cormorant Garamond',serif;font-size:24px;color:white;">Aaradhya <span style="color:var(--gold-lt);">SFS</span></div><p style="font-size:13px;margin-top:12px;color:rgba(255,255,255,0.4);">Pharma field force specialists.</p></div><div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="services.html">Services</a></div><div class="footer-col"><h4>Connect</h4><p style="font-size:13px;color:rgba(255,255,255,0.5);">✉️ aaradhyasfs@gmail.com</p></div></div><div class="footer-bottom"><span>© 2025 Aaradhya Sales Force Solutions</span></div></div></footer>
+
+<script>
+function toggleService(el){el.classList.toggle('selected');}
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('success-msg').style.display='block';
+  document.getElementById('contactForm').reset();
+  document.querySelectorAll('.char-opt').forEach(o=>o.classList.remove('selected'));
+  setTimeout(()=>{document.getElementById('success-msg').style.display='none';},4000);
+}
+document.getElementById('hamburger')?.addEventListener('click',()=>{document.getElementById('mobileMenu')?.classList.toggle('open');});
+</script>
+</body>
+</html>
