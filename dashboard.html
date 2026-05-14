@@ -36,5 +36,16 @@ function logout(){loggedIn=false;document.getElementById('loginView').style.disp
 function renderAll(){document.getElementById('kpiRow').innerHTML=`<div class="kpi"><div class="kpi-val">${sampleData.candidates.length}</div><div>Candidates</div></div><div class="kpi"><div class="kpi-val">${sampleData.clients.length}</div><div>Clients</div></div><div class="kpi"><div class="kpi-val">${sampleData.deployments.length}</div><div>Deployed</div></div>`;document.getElementById('activityList').innerHTML=sampleData.activities.map(a=>`<div>• ${a}</div>`).join('');document.querySelector('#candTable tbody').innerHTML=sampleData.candidates.map(c=>`<tr><td>${c.name}</td><td>${c.hq}</td><td>${c.status}</td></tr>`).join('');document.querySelector('#clientTable tbody').innerHTML=sampleData.clients.map(c=>`<tr><td>${c.company}</td><td>${c.contact}</td><td>${c.status}</td></tr>`).join('');document.querySelector('#depTable tbody').innerHTML=sampleData.deployments.map(d=>`<tr><td>${d.name}</td><td>${d.client}</td><td>${d.hq}</td><td>${d.status}</td></tr>`).join('');}
 function showPanel(p){document.getElementById('overviewPanel').style.display='none';document.getElementById('candidatesPanel').style.display='none';document.getElementById('clientsPanel').style.display='none';document.getElementById('deploymentsPanel').style.display='none';if(p==='overview')document.getElementById('overviewPanel').style.display='block';if(p==='candidates')document.getElementById('candidatesPanel').style.display='block';if(p==='clients')document.getElementById('clientsPanel').style.display='block';if(p==='deployments')document.getElementById('deploymentsPanel').style.display='block';}
 </script>
+  // Initialize sample data if empty (add after data declarations)
+function initSampleData() {
+  if (cands.length === 0) {
+    cands = [
+      { id: uid(), name: "Rajesh Kumar", mob: "9876543210", hq: "Bhubaneswar", role: "Medical Representative (MR)", div: "Cardiology", exp: "3", company: "Sun Pharma", ctc: "22000", status: "active", avail: "Immediate", src: "Direct", notes: "" },
+      { id: uid(), name: "Smita Patnaik", mob: "8765432109", hq: "Cuttack", role: "Senior MR", div: "Diabetology", exp: "5", company: "Abbott", ctc: "28000", status: "active", avail: "Within 15 days", src: "Referral", notes: "" }
+    ];
+    sv(K.c, cands);
+  }
+  // Similarly add sample clients and deployments...
+}
 </body>
 </html>
