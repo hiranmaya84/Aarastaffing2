@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — Aaradhya Sales Force Solutions</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+.contact-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; align-items: start; }
+.contact-info { position: sticky; top: calc(var(--nav-h) + 32px); }
+.contact-info h2 { font-family: 'Cormorant Garamond',serif; font-size: 36px; font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+.contact-info p { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 28px; }
+.contact-promise { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; font-size: 14px; }
+.cp-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.cp-text strong { display: block; font-weight: 600; margin-bottom: 2px; }
+.cp-text span { font-size: 13px; color: var(--muted); }
+.contact-channels { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+.channel-card { background: var(--page-bg); border-radius: 12px; border: 1px solid var(--border); padding: 16px 18px; display: flex; align-items: center; gap: 14px; transition: border-color .15s, box-shadow .15s; }
+.channel-card:hover { border-color: var(--teal); box-shadow: 0 4px 16px rgba(0,82,74,.1); }
+.ch-icon { font-size: 22px; flex-shrink: 0; }
+.ch-label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+.ch-val { font-size: 15px; font-weight: 600; color: var(--dark); margin-top: 1px; }
+
+/* FORM */
+.form-card { background: #fff; border-radius: 18px; border: 1px solid var(--border); padding: 36px; box-shadow: 0 8px 32px rgba(0,82,74,.07); }
+.form-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.form-card .form-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.form-section-title { font-size: 11px; font-weight: 700; color: var(--teal); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.form-block { margin-bottom: 24px; }
+.char-select { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap: 8px; }
+.char-opt { border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; font-size: 13px; cursor: pointer; transition: all .15s; text-align: center; font-weight: 500; background: #fff; }
+.char-opt:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,82,74,.04); }
+.char-opt.selected { border-color: var(--teal); background: rgba(0,82,74,.08); color: var(--teal); }
+.submit-row { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.success-msg { display: none; background: #E6F4F0; border: 1px solid var(--success); border-radius: 10px; padding: 16px 20px; color: var(--success); font-size: 14px; font-weight: 500; align-items: center; gap: 10px; margin-top: 12px; }
+.success-msg.show { display: flex; }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 0; max-width: 720px; margin: 52px auto 0; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; font-size: 15px; font-weight: 600; gap: 16px; }
+.faq-q:hover { color: var(--teal); }
+.faq-arrow { font-size: 18px; color: var(--muted); transition: transform .2s; flex-shrink: 0; }
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-a { display: none; font-size: 14px; color: var(--muted); line-height: 1.75; padding-bottom: 20px; }
+.faq-item.open .faq-a { display: block; }
+
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;}
+  .contact-info{position:static;}
+}
+</style>
+</head>
+<body>
+<script>window.ACTIVE_PAGE='contact.html';</script>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <div class="eyebrow light">Let's Talk</div>
+    <h1>Share Your<em>Requirement</em></h1>
+    <p>Tell us your territory, product division and MR headcount. We'll respond within hours — and have a shortlist ready in 48.</p>
+  </div>
+</div>
+
+<section class="section">
+<div class="container">
+  <div class="contact-layout">
+
+    <!-- LEFT: INFO -->
+    <div class="contact-info">
+      <div class="eyebrow">Our Promise</div>
+      <h2>Fast, Honest, Pharma-Specific</h2>
+      <p>We respond to every enquiry within a few hours during business hours. No automated replies, no sales pitch — just a direct conversation about your requirement.</p>
+      <div class="contact-promise">
+        <div class="cp-icon">⚡</div>
+        <div class="cp-text"><strong>48-Hour Shortlist</strong><span>Screened MR profiles delivered within 48 hours of requirement</span></div>
+      </div>
+      <div class="contact-promise">
+        <div class="cp-icon">💊</div>
+        <div class="cp-text"><strong>Pharma Specialists Only</strong><span>We work exclusively in pharma field force — no generic staffing</span></div>
+      </div>
+      <div class="contact-promise">
+        <div class="cp-icon">🔄</div>
+        <div class="cp-text"><strong>Replacement Guarantee</strong><span>If an MR exits within SLA, we replace at no additional charge</span></div>
+      </div>
+      <div class="contact-promise">
+        <div class="cp-icon">🤝</div>
+        <div class="cp-text"><strong>No Upfront Fee</strong><span>We discuss pricing only after understanding your requirement</span></div>
+      </div>
+      <div class="contact-channels">
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="channel-card" style="text-decoration:none">
+          <div class="ch-icon">💬</div><div><div class="ch-label">WhatsApp (Fastest)</div><div class="ch-val">+91 XXXXX XXXXX</div></div>
+        </a>
+        <div class="channel-card">
+          <div class="ch-icon">📞</div><div><div class="ch-label">Phone</div><div class="ch-val">+91 XXXXX XXXXX</div></div>
+        </div>
+        <div class="channel-card">
+          <div class="ch-icon">✉️</div><div><div class="ch-label">Email</div><div class="ch-val">aaradhyasfs@gmail.com</div></div>
+        </div>
+        <div class="channel-card">
+          <div class="ch-icon">📍</div><div><div class="ch-label">Location</div><div class="ch-val">Odisha, Eastern India</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="form-card">
+      <h3>Send Your Requirement</h3>
+      <p class="form-sub">Fill this in and we'll respond with an initial plan within a few hours.</p>
+
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <!-- Company -->
+        <div class="form-block">
+          <div class="form-section-title">Company Details</div>
+          <div class="form-grid" style="gap:14px">
+            <div class="fg"><label>Company Name *</label><input id="f-company" required placeholder="e.g. Medico Pharma Ltd"></div>
+            <div class="fg"><label>Company Type</label>
+              <select id="f-cotype">
+                <option value="">Select type</option>
+                <option>Generic Pharma</option><option>Ethical / Branded</option>
+                <option>Ayurvedic / Herbal</option><option>OTC / Consumer Health</option>
+                <option>PCD / Franchise</option><option>Nutraceutical</option>
+                <option>Oncology Specialist</option><option>Multinational (MNC)</option>
+              </select>
+            </div>
+            <div class="fg"><label>Your Name *</label><input id="f-name" required placeholder="Contact person name"></div>
+            <div class="fg"><label>Your Designation</label>
+              <select id="f-desig">
+                <option value="">Select</option>
+                <option>HR Manager</option><option>National Sales Manager (NSM)</option>
+                <option>Regional Sales Manager (RSM)</option><option>Area Sales Manager (ASM)</option>
+                <option>Director / Owner</option><option>MD / CEO</option><option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Mobile *</label><input id="f-mobile" type="tel" required placeholder="98XXXXXXXX"></div>
+            <div class="fg"><label>Email</label><input id="f-email" type="email" placeholder="Optional"></div>
+          </div>
+        </div>
+
+        <!-- Requirement -->
+        <div class="form-block">
+          <div class="form-section-title">Field Force Requirement</div>
+          <div class="form-grid" style="gap:14px">
+            <div class="fg"><label>Number of MRs Needed</label><input id="f-count" type="number" min="1" placeholder="e.g. 5"></div>
+            <div class="fg"><label>Role(s) Needed</label>
+              <select id="f-role">
+                <option>Medical Representatives (MR)</option>
+                <option>Senior MRs</option>
+                <option>Area Business Managers (ABM)</option>
+                <option>Mixed Roles (MR + ABM)</option>
+                <option>PSR / DSR</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="fg span2"><label>Target Territory / HQ *</label>
+              <select id="f-territory" required>
+                <option value="">Select primary territory</option>
+                <optgroup label="Major HQs">
+                  <option>Bhubaneswar</option><option>Cuttack</option><option>Sambalpur</option>
+                  <option>Rourkela</option><option>Berhampur</option><option>Balasore</option>
+                </optgroup>
+                <optgroup label="Tier-2 / Tier-3">
+                  <option>Kalahandi</option><option>Nuapada</option><option>Bargarh</option>
+                  <option>Koraput</option><option>Jharsuguda</option><option>Balangir</option>
+                </optgroup>
+                <option>Multiple territories</option><option>Pan-Odisha</option>
+              </select>
+            </div>
+            <div class="fg"><label>Product Division *</label>
+              <select id="f-division" required>
+                <option value="">Select division</option>
+                <option>Allopathy / Ethical</option><option>Generic Pharma</option>
+                <option>Ayurvedic / Herbal</option><option>OTC / Consumer Health</option>
+                <option>Oncology</option><option>Cardiology</option><option>Diabetology</option>
+                <option>Dermatology</option><option>Gynaecology</option><option>Paediatrics</option>
+                <option>Orthopaedics</option><option>Neurology</option><option>Gastroenterology</option>
+                <option>PCD / Franchise</option><option>Multiple / Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Doctor Segment</label>
+              <select id="f-docseg">
+                <option value="">Select</option>
+                <option>General Physicians (GPs)</option><option>Specialists Only</option>
+                <option>Mixed (GPs + Specialists)</option><option>Hospital / Institution</option>
+                <option>Chemist-focused</option>
+              </select>
+            </div>
+            <div class="fg"><label>CTC Band Offered</label>
+              <select id="f-ctc">
+                <option value="">Select range</option>
+                <option>₹12,000 – ₹15,000 / month</option><option>₹15,000 – ₹18,000 / month</option>
+                <option>₹18,000 – ₹22,000 / month</option><option>₹22,000 – ₹28,000 / month</option>
+                <option>₹28,000 – ₹35,000 / month</option><option>₹35,000+ / month</option>
+              </select>
+            </div>
+            <div class="fg"><label>Joining Timeline</label>
+              <select id="f-timeline">
+                <option>Immediate — within 1 week</option><option>Within 15 days</option>
+                <option>Within 1 month</option><option>Flexible</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div class="form-block">
+          <div class="form-section-title">Service Required</div>
+          <div class="char-select" id="service-opts">
+            <div class="char-opt" onclick="toggleService(this)">MR Recruitment</div>
+            <div class="char-opt" onclick="toggleService(this)">Payroll Outsourcing</div>
+            <div class="char-opt" onclick="toggleService(this)">Full Service</div>
+            <div class="char-opt" onclick="toggleService(this)">Compliance Support</div>
+            <div class="char-opt" onclick="toggleService(this)">Replacement Only</div>
+            <div class="char-opt" onclick="toggleService(this)">Need Advice</div>
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="form-block">
+          <div class="form-section-title">Additional Details</div>
+          <div class="fg span2">
+            <label>Tell us more (optional)</label>
+            <textarea id="f-notes" placeholder="Any specific experience required, product knowledge, reason for vacancy, previous agency issues, expected joining date..."></textarea>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn btn-gold btn-lg" style="flex:1;justify-content:center">Send Requirement →</button>
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn btn-wa btn-lg">💬 WhatsApp Instead</a>
+        </div>
+        <div class="success-msg" id="success-msg">
+          ✅ Your requirement has been sent! We'll get back to you within a few hours.
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--page-bg)">
+<div class="container text-center">
+  <div class="eyebrow" style="justify-content:center">Common Questions</div>
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">How quickly can you provide a shortlist? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">Our standard SLA is 48 hours from when we receive your full requirement — territory, CTC band, division and joining timeline. For urgent requirements with immediate joining, we can often deliver a shortlist within 24 hours depending on the HQ and division.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What is your replacement guarantee? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">If an MR we place exits within the replacement SLA period (typically 60–90 days, agreed upfront), we source a replacement at no additional recruitment fee. The replacement shortlist is delivered within 5–7 working days of the exit being confirmed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Do you cover Tier-2 and Tier-3 markets? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">Yes — and this is one of our strongest capabilities. We have active candidate pipelines in Kalahandi, Nuapada, Bargarh, Koraput, Jharsuguda and Balangir. Most national staffing agencies won't deploy here profitably. We specialize in exactly these markets.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">What product divisions do you recruit for? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">We recruit for all major divisions: Allopathy/Ethical, Generic, Ayurvedic/Herbal, OTC, Cardiology, Diabetology, Dermatology, Gynaecology, Paediatrics, Orthopaedics, Neurology, Oncology, Gastroenterology and PCD/Franchise. Our candidate database is tagged by division for accurate matching.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">How does the payroll outsourcing work? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">You pay us one consolidated invoice monthly — covering MR salary, TA/DA and our management fee. We disburse salary directly to MR bank accounts, generate payslips, and handle all related paperwork. GST applies only on our management fee, not the full billing amount.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Is there an upfront fee to get started? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">No upfront fee. We discuss our pricing structure only after understanding your requirement. For recruitment, our fee is typically charged upon successful joining of the candidate. For payroll outsourcing, billing begins from the first month of deployment.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Can you handle compliance (PF, ESIC, offer letters)? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">Yes. We provide offer letters and appointment documents from day one. PF and ESIC compliance is added as your MR headcount scales — typically from 20+ employees. We work with CA support for statutory filings.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">Do you only work in Odisha? <span class="faq-arrow">↓</span></div>
+      <div class="faq-a">Our primary focus and deepest knowledge is Odisha. However, we can support deployments in neighbouring states — Jharkhand, Chhattisgarh and West Bengal — for clients with multi-state requirements. Contact us and we'll be honest about our coverage in your target area.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<script>
+function toggleService(el){el.classList.toggle('selected');}
+function toggleFAQ(el){
+  const item=el.parentElement;
+  item.classList.toggle('open');
+}
+function submitForm(e){
+  e.preventDefault();
+  const services=[...document.querySelectorAll('.char-opt.selected')].map(o=>o.textContent).join(', ');
+  const data={
+    company:document.getElementById('f-company').value,
+    cotype:document.getElementById('f-cotype').value,
+    name:document.getElementById('f-name').value,
+    desig:document.getElementById('f-desig').value,
+    mobile:document.getElementById('f-mobile').value,
+    email:document.getElementById('f-email').value,
+    count:document.getElementById('f-count').value,
+    role:document.getElementById('f-role').value,
+    territory:document.getElementById('f-territory').value,
+    division:document.getElementById('f-division').value,
+    docseg:document.getElementById('f-docseg').value,
+    ctc:document.getElementById('f-ctc').value,
+    timeline:document.getElementById('f-timeline').value,
+    services:services||'Not specified',
+    notes:document.getElementById('f-notes').value,
+  };
+  const msg=`*New Requirement — Aaradhya SFS*
+
+*Company:* ${data.company} (${data.cotype||'—'})
+*Contact:* ${data.name} | ${data.desig||'—'}
+*Mobile:* ${data.mobile}
+*Email:* ${data.email||'—'}
+
+*Requirement:*
+• MRs Needed: ${data.count||'—'}
+• Role: ${data.role}
+• Territory: ${data.territory}
+• Division: ${data.division}
+• Doctor Segment: ${data.docseg||'—'}
+• CTC Band: ${data.ctc||'—'}
+• Joining: ${data.timeline}
+
+*Services Needed:* ${data.services}
+*Notes:* ${data.notes||'—'}`;
+
+  window.open(`https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(msg)}`,'_blank');
+  document.getElementById('success-msg').classList.add('show');
+  document.getElementById('contactForm').reset();
+  document.querySelectorAll('.char-opt').forEach(o=>o.classList.remove('selected'));
+}
+</script>
+<script src="_layout.js"></script>
+</body></html>
